@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title><%= title %></title>
+<!-- <link rel='stylesheet' href='/stylesheets/style.css' /> -->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+<div class="container">
+<h1><%= title %></h1>
+
+<ul class="nav nav-tabs">
+<li class="active"><a href="/">Place Order</a></li>
+<li><a href="/orders">Orders</a></li>
+</ul>
+
+<br/>
+<div class="row">
+<div class="col-md-12">
+<form method="post" id="submitForm">
+<div class="form-group">
+<label for="pizzaSize">Pizza Size</label>
+<input type="radio" required name="pizzaSize" id="Small" value="9 Inch Small">9 Inch Small
+<input type="radio" required  name="pizzaSize" id="Medium" value="12 Inch Medium">12 inch Medium
+<input type="radio" required  name="pizzaSize" id="Large" value="14 Inch Large">14 Inch Large
+<input type="radio" required  name="pizzaSize" id="PersonalPan" value="Personal Pan">Personal Pan
+</div>
+<div class="form-group">
+<label for="crustType">Crust Type</label>
+<input type="radio" required id="HomeStyle" name="crustType" value="crustType">Home Style
+<input type="radio" required id="Thin" name="crustType" value="Thin & Crispy">Thin &amp; Crispy
+<input type="radio" required id="Pan" name="crustType" value="Pan">Pan
+<input type="radio" required id="Stuffed" name="crustType" value="Stuffed Crust">Stuffed Crust
+</div>
+
+<div class="form-group">
+<label for="vegToppings">Veg Toppings</label>
+
+<input type="checkbox"  id="Mushroom" name="mushroom" class='veg'>Mushroom</input>
+<input type="checkbox"  id="GreenPepper" name="greenpepper" class='veg'>Green Pepper</input>
+<input type="checkbox"  id="Jalepenos" name="jalepenos" class='veg'>Jalepenos</input>
+<input type="checkbox"  id="Olives" name="olives" class='veg'>Olives</input>
+</div>
+
+<div class="form-group">
+<label for="nonvegToppings">Non-Veg Toppings</label>
+
+<input type="checkbox" id="Beef" name="beef" class='nonveg'>Beef</input>
+<input type="checkbox" id="Ham" name="ham" class='nonveg'>Ham</input>
+<input type="checkbox" id="Chicken" name="chicken" class='nonveg'>Chicken</input>
+<input type="checkbox" id="Pepperoni" name="pepperoni" class='nonveg'>Pepperoni</input>
+</div>
+
+
+<div class="form-group">
+<label for="vegtoppingsCost">Veg Toppings Price</label>
+
+Each for: $<span id="vegtoppingsCost"> 1.75<span>
+</div>
+<div class="form-group">
+<label for="nonvegtoppingsCost">Non-Veg Toppings Price</label>
+
+Each for: $<span id="nonvegtoppingsCost">2.75<span>
+</div>
+<div class="form-group">
+<label for="smallPizzaCost">Small Pizza Price</label>
+
+$<span id="smallPizzaCost">10<span>
+</div>
+
+<div class="form-group">
+<label for="mediumPizzaCost">Medium Pizza Price</label>
+
+$<span id="mediumPizzaCost">15<span>
+</div>
+<div class="form-group">
+<label for="personalPizzaCost">Personal Pizza Price</label>
+
+$<span id="personalPizzaCost">20<span>
+</div>
+
+<div class="form-group">
+<label for="largePizzaCost">Large Pizza Price</label>
+
+$<span id="largePizzaCost">22<span>
+</div>
+<div class="form-group">
+<label for="stuffedCrustCost">Stuffed Crust Price</label>
+
+Additional- $<span id="stuffedCrustCost">3.50<span>
+</div>
+
+<div class="form-group">
+<label for="quantity">Quantity</label>
+<input id="quantity" required class="form-control required" min="1" name="quantity" type="number">
+</div>
+
+<div class="form-group">
+<label for="phone">Phone</label>
+
+<input class="form-control" required type="text" id="phone" name="phone"> 
+</div>
+<div class="form-group">
+<label for="address">Address</label>
+
+<input class="form-control" required type="text" id="address" name="address"> 
+</div>
+<button type="submit" class="btn btn-success">Submit</button>
+<div class="form-group margin-bottom-10">
+</div>
+<div id="statusMsg">
+</div>
+</form>
+
+</div>
+</div>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="javascripts/index.js"></script>
+</html>

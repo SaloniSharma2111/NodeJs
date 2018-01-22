@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title><%= title %></title>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+<div class="container">
+<h1><%= title %></h1>
+
+<ul class="nav nav-tabs">
+<li><a href="/">Place Order</a></li>
+<li class="active"><a href="/orders">Orders</a></li>
+</ul>
+
+<label for="phone">Phone</label>
+<input id="phone" class="form-control" name="phone" type="string">
+<div class="margin-bottom-10">
+
+<label for="address">Address</label>
+<input id="address" class="form-control" name="address" type="string">
+
+<button type="button" class="btn btn-success" onclick="searchData()">Search</button>
+
+<br/>
+<div class="row">
+<div class="col-md-6">
+<table class="table table-striped table-bordered
+table-hover table-condensed" id="orders">
+<thead>
+    <th>Pizza Size</th>
+    <th>Crust Type</th>
+    <th>Quantity</th>
+    <th>Phone Number</th>
+    <th>Address</th>
+    <th>Veg Toppings</th>
+    <th>Non-Veg Toppings</th>
+</thead>
+</table>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="javascripts/orders.js"></script>
+</html>
